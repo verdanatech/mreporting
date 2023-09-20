@@ -22,6 +22,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Mreporting. If not, see <http://www.gnu.org/licenses/>.
  * -------------------------------------------------------------------------
+ * @copyright Copyright (C) 2003-2023 by Mreporting plugin team.
  * @copyright Copyright (C) 2003-2022 by Mreporting plugin team.
  * @license   GPLv2 https://www.gnu.org/licenses/gpl-2.0.html
  * @link      https://github.com/pluginsGLPI/mreporting
@@ -504,7 +505,17 @@ class PluginMreportingCommon extends CommonDBTM {
          echo "</tr>";
 
          echo "</table>";
-         Html::openArrowMassives("exportform", true);
+         $formname = 'exportform';
+         echo "<table width='950px'>";
+         $arrow = "fas fa-level-up-alt";
+
+         echo "<tr>";
+         echo "<td><i class='$arrow fa-flip-horizontal fa-lg mx-2'></i></td>";
+         echo "<td class='center' style='white-space:nowrap;'>";
+         echo "<a onclick= \"if ( markCheckboxes('$formname') ) return false;\" href='#'>" . __('Check all') . "</a></td>";
+         echo "<td>/</td>";
+         echo "<td class='center' style='white-space:nowrap;'>";
+         echo "<a onclick= \"if ( unMarkCheckboxes('$formname') ) return false;\" href='#'>" . __('Uncheck all') . "</a></td>";
 
          $option[0] = __("Without data", 'mreporting');
          $option[1] = __("With data", 'mreporting');
@@ -1689,8 +1700,9 @@ class PluginMreportingCommon extends CommonDBTM {
    static function getReportSelectors($export = false) {
       ob_start();
       self::addToSelector();
-      $graphname = $_REQUEST['f_name'];
-      if (!isset($_SESSION['mreporting_selector'][$graphname])
+      $graphname = isset($_REQUEST['f_name']) ? $_REQUEST['f_name'] : false;
+      if (!$graphname
+         || !isset($_SESSION['mreporting_selector'][$graphname])
          || empty($_SESSION['mreporting_selector'][$graphname])) {
          return;
       }
@@ -1786,7 +1798,7 @@ class PluginMreportingCommon extends CommonDBTM {
       $selectors = PluginMreportingPreference::checkPreferenceValue('selectors', Session::getLoginUserID());
       if ($selectors) {
          $values = json_decode(stripslashes($selectors), true);
-         if (isset($values[$_REQUEST['f_name']])) {
+         if (isset($_REQUEST['f_name']) && isset($values[$_REQUEST['f_name']])) {
             foreach ($values[$_REQUEST['f_name']] as $key => $value) {
                $myvalues[$key] = $value;
             }

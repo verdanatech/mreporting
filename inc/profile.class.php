@@ -22,6 +22,7 @@
  * You should have received a copy of the GNU General Public License
  * along with Mreporting. If not, see <http://www.gnu.org/licenses/>.
  * -------------------------------------------------------------------------
+ * @copyright Copyright (C) 2003-2023 by Mreporting plugin team.
  * @copyright Copyright (C) 2003-2022 by Mreporting plugin team.
  * @license   GPLv2 https://www.gnu.org/licenses/gpl-2.0.html
  * @link      https://github.com/pluginsGLPI/mreporting
@@ -118,10 +119,14 @@ class PluginMreportingProfile extends CommonDBTM {
       $result_config = $DB->request("SELECT `id` FROM `glpi_plugin_mreporting_configs`");
       foreach ($DB->request("SELECT `id` FROM `glpi_profiles`") as $prof) {
          foreach ($result_config as $report) {
-            $DB->query("REPLACE INTO `glpi_plugin_mreporting_profiles`
-                           (`profiles_id`,`reports`,`right`)
-                        VALUES
-                           ('".$prof['id']."','".$report['id']."',NULL)");
+            $DB->updateOrInsert('glpi_plugin_mreporting_profiles', [
+               'profiles_id' => $prof['id'],
+               'reports'     => $report['id'],
+               'rights'      => null
+            ], [
+               'profiles_id' => $prof['id'],
+               'reports'     => $report['id'],
+            ]);
          }
       }
    }
@@ -154,13 +159,15 @@ class PluginMreportingProfile extends CommonDBTM {
       foreach ($config->find() as $report) {
          // add right for any reports for profile
          // Add manual request because Add function get error : right is set to NULL
-         $query = "REPLACE INTO `glpi_plugin_mreporting_profiles` SET
-                     `profiles_id` = $idProfile,
-                     `reports` = {$report['id']},
-                     `right` = " . READ;
-         $DB->query($query) or die('An error occurs during profile initialisation.');
+          $DB->updateOrInsert('glpi_plugin_mreporting_profiles', [
+             'profiles_id' => $idProfile,
+             'reports'     => $report['id'],
+             'rights'      => READ
+          ], [
+             'profiles_id' => $idProfile,
+             'reports'     => $report['id'],
+          ]) or die('An error occurs during profile initialisation.');
       }
-
    }
 
 
