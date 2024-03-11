@@ -32,119 +32,119 @@ global $LANG;
 
 $LANG['plugin_mreporting']['Inventory'] = [
 
-   'title' => "Zasoby",
+   'title' => "Inventár",
 
    'reportHbarComputersByOS' => [
-      'title'    => "Komputery wg OS",
-      'desc'     => "wykres słupkowy",
+      'title'    => "Počítače podľa OS",
+      'desc'     => "Pruhový",
       'category' => "OS",
    ],
 
    'reportPieComputersByOS' => [
-      'title'    => "Komputery wg OS",
-      'desc'     => "wykres kołowy",
+      'title'    => "Počítače podľa OS",
+      'desc'     => "Koláčový",
       'category' => "OS",
    ],
 
    'reportHbarComputersByFabricant' => [
-      'title'    => "Komputery wg producenta",
-      'desc'     => "wykres słupkowy",
-      'category' => "Producent",
+      'title'    => "Počítače podľa výrobcu",
+      'desc'     => "Pruhový",
+      'category' => "Výrobca",
    ],
 
    'reportPieComputersByFabricant' => [
-      'title'    => "Komputery wg producenta",
-      'desc'     => "wykres kołowy",
-      'category' => "Producent",
+      'title'    => "Počítače podľa výrobcu",
+      'desc'     => "Koláčový",
+      'category' => "Výrobca",
    ],
 
    'reportHbarComputersByType' => [
-      'title'    => "Komputery wg typu",
-      'desc'     => "wykres słupkowy",
+      'title'    => "Počítače podľa typu",
+      'desc'     => "Pruhový",
       'category' => "Typ",
    ],
 
    'reportPieComputersByType' => [
-      'title'    => "Komputery wg typu",
-      'desc'     => "wykres kołowy",
+      'title'    => "Počítače podľa typu",
+      'desc'     => "Koláčový",
       'category' => "Typ",
    ],
 
    'reportHbarComputersByStatus' => [
-      'title'    => "Komputery wg statusu",
-      'desc'     => "wykres słupkowy",
-      'category' => "Status",
+      'title'    => "Počítače podľa stavu",
+      'desc'     => "Pruhový",
+      'category' => "Stav",
    ],
 
    'reportHbarPrintersByStatus' => [
-      'title'    => "Komputery wg statusu",
-      'desc'     => "wykres słupkowy",
-      'category' => "Status",
+      'title'    => "Tlačiarne podľa stavu",
+      'desc'     => "Pruhový",
+      'category' => "Stav",
    ],
 
    'reportHbarWindows' => [
-      'title'    => "Windows - wersje",
-      'desc'     => "wykres słupkowy",
+      'title'    => "Windows verzie",
+      'desc'     => "Pruhový",
       'category' => "OS",
    ],
 
    'reportHbarLinux' => [
-      'title'    => "Linux - wersje",
-      'desc'     => "wykres słupkowy",
+      'title'    => "Linux distribúcie - podrobnosti",
+      'desc'     => "Pruhový",
       'category' => "OS",
    ],
 
    'reportHbarLinuxDistro' => [
-      'title'    => "Linux - wersje",
-      'desc'     => "wykres słupkowy",
+      'title'    => "Linux distribúcie - podrobnosti",
+      'desc'     => "Pruhový",
       'category' => "OS",
    ],
 
    'reportHbarMac' => [
-      'title'    => "Mac OS X versions details",
-      'desc'     => "wykres słupkowy",
+      'title'    => "MacOS verzie - podrobnosti",
+      'desc'     => "Pruhový",
       'category' => "OS",
    ],
 
    'reportHbarMacFamily' => [
-      'title'    => "MAC OS X version overview",
-      'desc'     => "wykres słupkowy",
+      'title'    => "MacOS verzie - prehľad",
+      'desc'     => "Pruhový",
       'category' => "OS",
    ],
 
    'reportHbarComputersByAge' => [
-      'title'    => "Komputery wg wieku",
-      'desc'     => "wykres słupkowy",
-      'category' => "Inne",
+      'title'    => "Počítače podľa veku",
+      'desc'     => "Pruhový",
+      'category' => "Inventár",
    ],
 
    'reportPieComputersByAge' => [
-      'title'    => "Komputery wg wieku",
-      'desc'     => "wykres kołowy",
-      'category' => "Inne",
+      'title'    => "Počítače podľa veku",
+      'desc'     => "Koláčový",
+      'category' => "Inventár",
    ],
 
    'reportHbarFusionInventory' => [
-      'title'    => "FusionInventory agent - wersje",
-      'desc'     => "wykres słupkowy",
+      'title'    => "FusionInventory agent",
+      'desc'     => "Pruhový",
       'category' => "Agent",
    ],
 
    'reportPieFusionInventory' => [
-      'title'    => "FusionInventory agent - wersje",
-      'desc'     => "wykres kołowy",
+      'title'    => "FusionInventory agent",
+      'desc'     => "Koláčový",
       'category' => "Agent",
    ],
 
    'reportHbarMonitors' => [
-      'title'    => "Ilość monitorów na komputer",
-      'desc'     => "wykres słupkowy",
-      'category' => "Inne",
+      'title'    => "Obrazovky podľa počítačov",
+      'desc'     => "Pruhový",
+      'category' => "Inventár",
    ],
 
     'reportHbarComputersByEntity' => [
-      'title'    => "Komputery wg jednostki",
-      'desc'     => "wykres słupkowy",
-      'category' => "Entity",
+      'title'    => "Počítače podľa entít",
+      'desc'     => "Pruhový",
+      'category' => "Entita",
     ],
 ];

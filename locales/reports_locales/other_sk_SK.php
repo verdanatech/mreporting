@@ -30,20 +30,12 @@
 
 global $LANG;
 
-$LANG['plugin_mreporting']['Tag'] = [
+$LANG['plugin_mreporting']['Other'] = [
+   'title' => "Iné",
 
-   'title' => "Zásuvný modul pro štítky",
-
-   'reportPieTag' => [
-      'title'    => "Počty použitých štítků",
-      'desc'     => "Výsečový",
-      'category' => "Pro všechny GLPi objekty",
-   ],
-
-   'reportPieTagOnTicket' => [
-      'title'    => "Počty použitých štítků",
-      'desc'     => "Výsečový",
-      'category' => "Pro požadavky",
+   'reportHbarLogs' => [
+      'title'    => "Distribúcia logov",
+      'desc'     => "Pruhový",
+      'category' => "Logy",
    ]
-
 ];

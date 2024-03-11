@@ -32,18 +32,18 @@ global $LANG;
 
 $LANG['plugin_mreporting']['Tag'] = [
 
-   'title' => "Zásuvný modul pro štítky",
+   'title' => "Plugin značky (tag)",
 
    'reportPieTag' => [
-      'title'    => "Počty použitých štítků",
-      'desc'     => "Výsečový",
-      'category' => "Pro všechny GLPi objekty",
+      'title'    => "Počet použitých značiek",
+      'desc'     => "Koláčový",
+      'category' => "Pre všetky GLPi objekty",
    ],
 
    'reportPieTagOnTicket' => [
-      'title'    => "Počty použitých štítků",
-      'desc'     => "Výsečový",
-      'category' => "Pro požadavky",
+      'title'    => "Počet použitých značiek",
+      'desc'     => "Koláčový",
+      'category' => "Pre požiadavky",
    ]
 
 ];
